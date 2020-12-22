@@ -1,10 +1,14 @@
-if (document.cookie.includes("viewed?=44")) {
-  alert("Welcome back!")
-  
-} else {  
-  alert("Welcome To Quran Online!" )
-  
+var startup = 0
+
+
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
 }
+
 
 function deleteAllCookies() {
     var cookies = document.cookie.split(";");
@@ -21,5 +25,5 @@ function clearCookies(){
   alert("Clearing Cookies...")
   deleteAllCookies()
   console.log(document.cookie)
+  alert("Complete!")
 }
-document.cookie = "viewed?=44"
